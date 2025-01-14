@@ -9,7 +9,7 @@ if (!fs.existsSync(tempDir)) {
 }
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Enhanced getResolutions endpoint to get all available formats
 app.get('/getResolutions', async (req, res) => {
